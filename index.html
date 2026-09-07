@@ -1,689 +1,1991 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Chalamgolu Srinivas (Srinu) | Founder, IoT Engineer & Developer</title>
-<meta name="description" content="Portfolio of Chalamgolu Srinivas (Srinu), Founder of Datta Creations, IoT Engineer, Website Developer, Digital Marketer and B.Tech student building innovative digital experiences and automation solutions.">
-<meta name="keywords" content="Chalamgolu Srinivas, Srinu, Datta Creations, IoT Engineer, Website Developer, Web Developer Hyderabad, Arduino Developer, ESP32 Developer, Digital Innovator, Digital Marketing, Student Portfolio, B.Tech Portfolio, IoT Portfolio, Developer Portfolio">
-<meta name="author" content="Chalamgolu Srinivas">
-<meta name="theme-color" content="#0b0d0a">
+    <meta charset="UTF-8">
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="Chalamgolu Srinivas (Srinu) | Founder, IoT Engineer & Developer">
-<meta property="og:description" content="Founder of Datta Creations. IoT Engineer, Website Developer, Digital Marketer and B.Tech student building intelligent, creative digital experiences.">
-<meta property="og:image" content="images/myphoto1.jpg">
-<meta property="og:url" content="https://dattacreations.in">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#05060a">
+    <meta name="color-scheme" content="dark">
 
-<!-- Icons -->
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+    <meta name="description"
+          content="Portfolio of Chalamgolu Srinivas (Srinu), Founder of Datta Creations, IoT Engineer, Website Developer, Digital Marketer and B.Tech student building innovative digital experiences and automation solutions.">
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <meta name="keywords"
+          content="Chalamgolu Srinivas, Srinu, Datta Creations, IoT Engineer, Website Developer, Web Developer Hyderabad, Arduino Developer, ESP32 Developer, Digital Innovator, Digital Marketing, Student Portfolio, B.Tech Portfolio, IoT Portfolio, Developer Portfolio">
+
+    <meta name="author" content="Chalamgolu Srinivas">
+
+    <!-- Open Graph -->
+    <meta property="og:title"
+          content="Chalamgolu Srinivas (Srinu) | Founder, IoT Engineer & Developer">
+
+    <meta property="og:description"
+          content="Founder, IoT Engineer, Website Developer and Digital Innovator building digital experiences and intelligent technology solutions.">
+
+    <meta property="og:type" content="website">
+
+    <meta property="og:image"
+          content="images/myphoto1.jpg">
+
+    <meta property="og:url" content="">
+
+    <title>
+        Chalamgolu Srinivas (Srinu) | Founder, IoT Engineer & Developer
+    </title>
+
+    <!-- Favicon using your photo -->
+    <link rel="icon" type="image/jpeg" href="images/myphoto1.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- =========================
-NOISE + GRAIN OVERLAY
-========================= -->
-<div class="noise-overlay" aria-hidden="true"></div>
+<!-- =========================================================
+     CUSTOM CURSOR
+========================================================= -->
 
-<!-- =========================
-CUSTOM CURSOR
-========================= -->
-<div class="cursor-dot" aria-hidden="true"></div>
-<div class="cursor-ring" aria-hidden="true"></div>
-<div class="cursor-trail" id="cursorTrail" aria-hidden="true"></div>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
 
-<!-- =========================
-SCROLL PROGRESS BAR
-========================= -->
-<div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
 
-<!-- =========================
-LOADING SCREEN (cinematic iris wipe)
-========================= -->
+<!-- =========================================================
+     MOUSE FOLLOW GLOW
+========================================================= -->
+
+<div class="mouse-glow"></div>
+
+
+<!-- =========================================================
+     BACKGROUND EFFECTS
+========================================================= -->
+
+<div class="background-effects" aria-hidden="true">
+    <div class="gradient-orb orb-one"></div>
+    <div class="gradient-orb orb-two"></div>
+    <div class="gradient-orb orb-three"></div>
+
+    <div class="grid-background"></div>
+
+    <div class="noise"></div>
+
+    <div id="particles"></div>
+</div>
+
+
+<!-- =========================================================
+     SCROLL PROGRESS
+========================================================= -->
+
+<div class="scroll-progress">
+    <span></span>
+</div>
+
+
+<!-- =========================================================
+     LOADER
+========================================================= -->
+
 <div class="loader" id="loader">
-  <div class="loader-spotlight" aria-hidden="true"></div>
-  <div class="loader-ring" aria-hidden="true"></div>
-  <div class="loader-inner">
-    <div class="loader-mark">
-      <span class="loader-mark-cs">CS</span>
+
+    <div class="loader-content">
+
+        <div class="loader-photo-wrap">
+
+            <div class="loader-ring ring-one"></div>
+            <div class="loader-ring ring-two"></div>
+
+            <img
+                src="images/myphoto1.jpg"
+                alt="Chalamgolu Srinivas"
+                class="loader-photo"
+            >
+
+        </div>
+
+        <div class="loader-initials">SRINU</div>
+
+        <div class="loader-name">
+            Chalamgolu Srinivas
+        </div>
+
+        <div class="loader-line">
+            <span></span>
+        </div>
+
+        <div class="loader-percentage" id="loaderPercentage">
+            0%
+        </div>
+
     </div>
-    <div class="loader-name" id="loaderName" aria-hidden="true"></div>
-    <div class="loader-bar-track">
-      <div class="loader-bar-fill" id="loaderBarFill"></div>
-    </div>
-    <div class="loader-percent" id="loaderPercent">0%</div>
-  </div>
+
 </div>
 
-<!-- =========================
-BACKGROUND FX (fixed, behind everything)
-========================= -->
-<div class="bg-fx" aria-hidden="true">
-  <div class="bg-aurora" aria-hidden="true"></div>
-  <div class="bg-grid"></div>
-  <svg class="bg-trace" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
-    <defs>
-      <linearGradient id="traceGrad" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%" stop-color="#ffb454"/>
-        <stop offset="50%" stop-color="#2fd7a8"/>
-        <stop offset="100%" stop-color="#ff6a3d"/>
-      </linearGradient>
-    </defs>
-    <path d="M0 120 H320 V260 H720 V80 H1120 V300 H1440"/>
-    <path d="M0 420 H220 V520 H560 V640 H980 V480 H1440"/>
-    <path d="M0 680 H380 V780 H760 V700 H1140 V820 H1440"/>
-    <path d="M0 60 H160 V180 H460 V40 H840 V220 H1440"/>
-  </svg>
-  <div class="bg-blob bg-blob-1" data-parallax="0.06"></div>
-  <div class="bg-blob bg-blob-2" data-parallax="-0.05"></div>
-  <div class="bg-blob bg-blob-3" data-parallax="0.08"></div>
-  <div class="bg-mouse-glow" id="mouseGlow"></div>
-  <div class="bg-particles" id="bgParticles"></div>
-</div>
 
-<!-- =========================
-NAVIGATION
-========================= -->
-<header class="navbar" id="navbar">
-  <div class="nav-inner">
-    <a href="#home" class="nav-logo">Srinu<span>.</span></a>
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
-    <nav class="nav-links" id="navLinks">
-      <a href="#home" class="nav-link active" data-section="home">Home</a>
-      <a href="#about" class="nav-link" data-section="about">About</a>
-      <a href="#projects" class="nav-link" data-section="projects">Projects</a>
-      <a href="#experience" class="nav-link" data-section="experience">Experience</a>
-      <a href="#skills" class="nav-link" data-section="skills">Skills</a>
-      <a href="#connect" class="nav-link" data-section="connect">Connect</a>
+<header class="site-header" id="siteHeader">
+
+    <nav class="navbar">
+
+        <a href="#home"
+           class="brand magnetic"
+           aria-label="Go to home">
+
+            <span class="brand-photo-wrap">
+
+                <img
+                    src="images/myphoto1.jpg"
+                    alt="Chalamgolu Srinivas"
+                    class="brand-photo"
+                >
+
+                <span class="brand-photo-shine"></span>
+
+            </span>
+
+            <span class="brand-text">
+                <strong>SRINU</strong>
+                <small>CS.</small>
+            </span>
+
+        </a>
+
+
+        <div class="desktop-nav">
+
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#connect" class="nav-link">Connect</a>
+
+            <a href="#contact"
+               class="nav-talk magnetic">
+                Let's Talk
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+
+        <button
+            class="menu-toggle"
+            id="menuToggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
     </nav>
 
-    <a href="#contact" class="btn btn-nav magnetic">
-      <span>Let's Talk</span>
-    </a>
 
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+    <!-- MOBILE MENU -->
 
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#home" class="mobile-link">Home</a>
-    <a href="#about" class="mobile-link">About</a>
-    <a href="#projects" class="mobile-link">Projects</a>
-    <a href="#experience" class="mobile-link">Experience</a>
-    <a href="#skills" class="mobile-link">Skills</a>
-    <a href="#connect" class="mobile-link">Connect</a>
-    <a href="#contact" class="btn btn-primary mobile-cta">Let's Talk</a>
-  </div>
+    <div class="mobile-menu" id="mobileMenu">
+
+        <div class="mobile-menu-bg"></div>
+
+        <div class="mobile-menu-inner">
+
+            <div class="mobile-menu-top">
+
+                <span>MENU</span>
+
+                <button
+                    id="menuClose"
+                    class="menu-close"
+                    aria-label="Close navigation menu">
+
+                    <i data-lucide="x"></i>
+
+                </button>
+
+            </div>
+
+
+            <div class="mobile-links">
+
+                <a href="#home" class="mobile-link">
+                    <span>01</span>
+                    Home
+                </a>
+
+                <a href="#about" class="mobile-link">
+                    <span>02</span>
+                    About
+                </a>
+
+                <a href="#projects" class="mobile-link">
+                    <span>03</span>
+                    Projects
+                </a>
+
+                <a href="#experience" class="mobile-link">
+                    <span>04</span>
+                    Experience
+                </a>
+
+                <a href="#skills" class="mobile-link">
+                    <span>05</span>
+                    Skills
+                </a>
+
+                <a href="#connect" class="mobile-link">
+                    <span>06</span>
+                    Connect
+                </a>
+
+                <a href="#contact" class="mobile-link mobile-link-cta">
+                    Let's Talk
+                    <i data-lucide="arrow-up-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </header>
 
-<main id="main-content">
 
-<!-- =========================
-HERO SECTION
-========================= -->
-<section class="hero" id="home">
-  <div class="hero-bgword" aria-hidden="true" id="heroBgWord">SRINU</div>
+<main>
 
-  <div class="hero-inner">
-    <div class="hero-text">
-      <p class="hero-eyebrow hero-reveal" style="--d:0.05s">HELLO, I'M</p>
-      <h1 class="hero-title">
-        <span class="split-text" data-text="CHALAMGOLU">Chalamgolu</span>
-        <span class="split-text hero-highlight" data-text="SRINIVAS">SRINIVAS</span>
-      </h1>
 
-      <div class="hero-role hero-reveal" style="--d:0.55s">
-        <span class="role-static">Founder</span>
-        <span class="role-dot">•</span>
-        <span class="role-static">IoT Engineer</span>
-        <span class="role-dot">•</span>
-        <span class="role-rotator"><span id="roleRotator">Digital Innovator</span></span>
-      </div>
+<!-- =========================================================
+     HERO
+========================================================= -->
 
-      <p class="hero-desc hero-reveal" style="--d:0.65s">
-        Building digital experiences, intelligent IoT solutions, and creative brands
-        that turn ideas into reality.
-      </p>
+<section class="hero section" id="home">
 
-      <div class="hero-actions hero-reveal" style="--d:0.75s">
-        <a href="#projects" class="btn btn-primary magnetic">
-          <span>Explore My Work</span>
-          <i data-lucide="arrow-up-right"></i>
-        </a>
-        <a href="#contact" class="btn btn-outline magnetic">
-          <span>Let's Connect</span>
-        </a>
-      </div>
-
-     <div class="hero-social hero-reveal" style="--d:0.85s">
-
-    <a href="https://www.instagram.com/mr._.srinu__"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="social-dot magnetic"
-       aria-label="Instagram">
-        <i class="fa-brands fa-instagram"></i>
-    </a>
-
-    <a href="https://www.linkedin.com/in/ch-srinivas-srinu-3a5941398"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="social-dot magnetic"
-       aria-label="LinkedIn">
-        <i class="fa-brands fa-linkedin-in"></i>
-    </a>
-
-    <a href="https://www.facebook.com/srinu.shankar.37"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="social-dot magnetic"
-       aria-label="Facebook">
-        <i class="fa-brands fa-facebook-f"></i>
-    </a>
-
-    <a href="https://www.snapchat.com/@srinu_212"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="social-dot magnetic"
-       aria-label="Snapchat">
-        <i class="fa-brands fa-snapchat"></i>
-    </a>
-
-</div>
+    <div class="hero-background-text">
+        SRINU
     </div>
 
-    <div class="hero-visual hero-reveal-scale" style="--d:0.3s">
-      <div class="hero-photo-wrap" id="heroPhotoWrap">
-        <div class="orbit-ring orbit-ring-1"></div>
-        <div class="orbit-ring orbit-ring-2"></div>
-        <div class="orbit-glow"></div>
 
-        <div class="orbit-labels" aria-hidden="true">
-          <span class="orbit-label" style="--angle:0deg">HTML</span>
-          <span class="orbit-label" style="--angle:40deg">CSS</span>
-          <span class="orbit-label" style="--angle:80deg">JavaScript</span>
-          <span class="orbit-label" style="--angle:120deg">IoT</span>
-          <span class="orbit-label" style="--angle:160deg">Arduino</span>
-          <span class="orbit-label" style="--angle:200deg">ESP32</span>
-          <span class="orbit-label" style="--angle:240deg">Automation</span>
-          <span class="orbit-label" style="--angle:280deg">Founder</span>
-          <span class="orbit-label" style="--angle:320deg">Developer</span>
+    <div class="hero-content">
+
+        <div class="hero-copy reveal-left">
+
+            <div class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                HELLO, I'M
+            </div>
+
+
+            <h1 class="hero-title">
+
+                <span>CHALAMGOLU</span>
+
+                <span>
+                    <span class="outline-text">SRINIVAS</span>
+                </span>
+
+                <span class="hero-name">
+                    <span>SRINU</span>
+                </span>
+
+            </h1>
+
+
+            <div class="hero-profession">
+
+                <span class="profession-prefix">
+                    I AM A
+                </span>
+
+                <span
+                    id="professionText"
+                    class="profession-text">
+                    Founder
+                </span>
+
+            </div>
+
+
+            <p class="hero-description">
+                Building digital experiences, intelligent IoT solutions,
+                and creative brands that turn ideas into reality.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#projects"
+                   class="btn btn-primary magnetic">
+
+                    <span>Explore My Work</span>
+
+                    <i data-lucide="arrow-down-right"></i>
+
+                    <span class="button-shine"></span>
+
+                </a>
+
+
+                <a href="#connect"
+                   class="btn btn-secondary magnetic">
+
+                    <span>Let's Connect</span>
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-socials">
+
+                <a href="https://www.instagram.com/datta_creations"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram"
+                   class="social-icon magnetic">
+
+                    <i data-lucide="instagram"></i>
+
+                </a>
+
+
+                <a href="#connect"
+                   aria-label="LinkedIn"
+                   class="social-icon magnetic">
+
+                    <i data-lucide="linkedin"></i>
+
+                </a>
+
+
+                <a href="#connect"
+                   aria-label="Facebook"
+                   class="social-icon magnetic">
+
+                    <i data-lucide="facebook"></i>
+
+                </a>
+
+
+                <a href="tel:8367022341"
+                   aria-label="Phone"
+                   class="social-icon magnetic">
+
+                    <i data-lucide="phone"></i>
+
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="hero-photo-frame" id="heroPhotoFrame">
-          <img src="images/myphoto1.jpg" alt="Chalamgolu Srinivas — Founder of Datta Creations" class="hero-photo">
+
+        <!-- HERO PHOTO -->
+
+        <div class="hero-visual reveal-scale">
+
+            <div class="hero-photo-area">
+
+                <div class="photo-aura"></div>
+
+                <div class="photo-orbit orbit-main"></div>
+                <div class="photo-orbit orbit-secondary"></div>
+                <div class="photo-orbit orbit-tertiary"></div>
+
+
+                <div class="technology-orbit">
+
+                    <span style="--i:0">HTML</span>
+                    <span style="--i:1">CSS</span>
+                    <span style="--i:2">JS</span>
+                    <span style="--i:3">IoT</span>
+                    <span style="--i:4">ESP32</span>
+                    <span style="--i:5">ARDUINO</span>
+                    <span style="--i:6">AI</span>
+                    <span style="--i:7">WEB</span>
+
+                </div>
+
+
+                <div class="hero-photo-frame">
+
+                    <div class="hero-photo-inner">
+
+                        <img
+                            src="images/myphoto1.jpg"
+                            alt="Portrait of Chalamgolu Srinivas"
+                            class="hero-photo"
+                        >
+
+                        <div class="photo-light"></div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="floating-tech tech-one">
+                    <i data-lucide="code-2"></i>
+                    <span>WEB</span>
+                </div>
+
+
+                <div class="floating-tech tech-two">
+                    <i data-lucide="cpu"></i>
+                    <span>IoT</span>
+                </div>
+
+
+                <div class="floating-tech tech-three">
+                    <i data-lucide="zap"></i>
+                    <span>IDEAS</span>
+                </div>
+
+
+                <div class="floating-tech tech-four">
+                    <i data-lucide="rocket"></i>
+                    <span>BUILD</span>
+                </div>
+
+            </div>
+
         </div>
-      </div>
+
     </div>
-  </div>
 
-  <a href="#about" class="scroll-indicator magnetic hero-reveal" style="--d:1s">
-    <span>SCROLL TO EXPLORE</span>
-    <i data-lucide="arrow-down"></i>
-  </a>
+
+    <div class="hero-bottom">
+
+        <div class="hero-scroll">
+            <span>SCROLL TO EXPLORE</span>
+
+            <div class="scroll-line">
+                <span></span>
+            </div>
+        </div>
+
+
+        <div class="hero-location">
+            <span class="location-dot"></span>
+            Hyderabad • India
+        </div>
+
+    </div>
+
 </section>
 
-<!-- =========================
-ABOUT ME SECTION
-========================= -->
-<section class="about" id="about">
-  <div class="section-inner">
-    <p class="section-label reveal">01 / ABOUT</p>
-    <h2 class="section-heading reveal">WHO I AM</h2>
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section class="about section" id="about">
+
+    <div class="section-number reveal">
+        01 / ABOUT
+    </div>
+
+
+    <div class="about-header">
+
+        <h2 class="section-title reveal">
+            WHO
+            <span>I AM</span>
+        </h2>
+
+        <p class="section-intro reveal">
+            Technology, creativity and entrepreneurship —
+            connected through one digital identity.
+        </p>
+
+    </div>
+
 
     <div class="about-grid">
-      <div class="about-photo-col reveal-left">
-        <div class="about-photo-frame" id="aboutPhotoFrame" data-parallax="0.1">
-          <img src="images/myphoto2.jpg" alt="Chalamgolu Srinivas working" class="about-photo">
-          <div class="about-photo-glow"></div>
-        </div>
-      </div>
 
-      <div class="about-content-col">
-        <p class="about-text reveal-right">
-          <span class="hl">Founder</span> of Datta Creations, <span class="hl">IoT</span> engineer, and digital innovator.
-          I build modern <span class="hl">websites</span>, <span class="hl">automation</span> systems, and digital experiences.
-        </p>
-        <p class="about-text reveal-right" style="--d:0.1s">
-          I'm a B.Tech student with a passion for technology, business collaboration, and creative problem-solving.
-        </p>
-        <p class="about-text reveal-right" style="--d:0.2s">
-          I enjoy turning ideas into meaningful digital products, leading teams, experimenting with technology,
-          and creating experiences that connect <span class="hl">innovation</span> with real-world needs through
-          strong <span class="hl">leadership</span>.
-        </p>
+        <div class="about-image-wrap reveal-left">
 
-        <div class="about-stats">
-          <div class="stat-card reveal-scale glow-border" style="--d:0.05s">
-            <span class="stat-num" data-count="1">0</span>
-            <span class="stat-label">Founder<br><small>Datta Creations</small></span>
-          </div>
-          <div class="stat-card reveal-scale glow-border" style="--d:0.15s">
-            <span class="stat-num" data-count="15">0</span>
-            <span class="stat-label">IoT<br><small>Arduino &amp; ESP32</small></span>
-          </div>
-          <div class="stat-card reveal-scale glow-border" style="--d:0.25s">
-            <span class="stat-num" data-count="20">0</span>
-            <span class="stat-label">Web<br><small>Modern Experiences</small></span>
-          </div>
-          <div class="stat-card reveal-scale glow-border" style="--d:0.35s">
-            <span class="stat-num" data-count="100">0</span>
-            <span class="stat-label">Focus<br><small>Innovation</small></span>
-          </div>
+            <div class="about-image-border"></div>
+
+            <img
+                src="images/myphoto2.jpg"
+                alt="Chalamgolu Srinivas"
+                class="about-image"
+                loading="lazy"
+            >
+
+            <div class="about-image-caption">
+                <span>CREATIVE TECHNOLOGIST</span>
+                <span>© 2026</span>
+            </div>
+
         </div>
-      </div>
+
+
+        <div class="about-content reveal-right">
+
+            <div class="about-label">
+                <span>01</span>
+                ABOUT SRINU
+            </div>
+
+
+            <p class="about-large-text">
+                Founder of Datta Creations, IoT engineer,
+                and digital innovator.
+            </p>
+
+
+            <p>
+                I build modern websites, automation systems,
+                and digital experiences.
+            </p>
+
+
+            <p>
+                I'm a B.Tech student with a passion for technology,
+                business collaboration, and creative problem-solving.
+            </p>
+
+
+            <p>
+                I enjoy turning ideas into meaningful digital products,
+                leading teams, experimenting with technology, and
+                creating experiences that connect innovation with
+                real-world needs.
+            </p>
+
+
+            <div class="about-tags">
+
+                <span>Founder</span>
+                <span>IoT</span>
+                <span>Web Development</span>
+                <span>Automation</span>
+                <span>Innovation</span>
+                <span>Leadership</span>
+
+            </div>
+
+
+            <div class="stats-grid">
+
+                <div class="stat-card reveal-scale">
+
+                    <strong
+                        class="counter"
+                        data-target="1">
+                        0
+                    </strong>
+
+                    <span>Founder</span>
+                    <small>Datta Creations</small>
+
+                </div>
+
+
+                <div class="stat-card reveal-scale">
+
+                    <strong
+                        class="counter"
+                        data-target="2">
+                        0
+                    </strong>
+
+                    <span>IoT Platforms</span>
+                    <small>Arduino & ESP32</small>
+
+                </div>
+
+
+                <div class="stat-card reveal-scale">
+
+                    <strong
+                        class="counter"
+                        data-target="100">
+                        0
+                    </strong>
+
+                    <span>Creative Energy</span>
+                    <small>Always Learning</small>
+
+                </div>
+
+
+                <div class="stat-card reveal-scale">
+
+                    <strong
+                        class="counter"
+                        data-target="24">
+                        0
+                    </strong>
+
+                    <span>Focus</span>
+                    <small>Innovation</small>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
+
 </section>
 
-<!-- =========================
-MARQUEE SECTION
-========================= -->
-<section class="marquee-section" aria-hidden="true">
-  <div class="marquee-track" id="marqueeTrack">
-    <span>WEB DEVELOPMENT ✦ IOT ✦ AUTOMATION ✦ DIGITAL MARKETING ✦ INNOVATION ✦ ENTREPRENEURSHIP ✦ CREATIVE TECHNOLOGY ✦&nbsp;</span>
-    <span>WEB DEVELOPMENT ✦ IOT ✦ AUTOMATION ✦ DIGITAL MARKETING ✦ INNOVATION ✦ ENTREPRENEURSHIP ✦ CREATIVE TECHNOLOGY ✦&nbsp;</span>
-  </div>
+
+<!-- =========================================================
+     MARQUEE
+========================================================= -->
+
+<section class="marquee-section">
+
+    <div class="marquee-track">
+
+        <div class="marquee-content">
+
+            WEB DEVELOPMENT
+            <span>✦</span>
+            IOT
+            <span>✦</span>
+            AUTOMATION
+            <span>✦</span>
+            DIGITAL MARKETING
+            <span>✦</span>
+            INNOVATION
+            <span>✦</span>
+            ENTREPRENEURSHIP
+            <span>✦</span>
+            CREATIVE TECHNOLOGY
+            <span>✦</span>
+
+        </div>
+
+
+        <div class="marquee-content">
+
+            WEB DEVELOPMENT
+            <span>✦</span>
+            IOT
+            <span>✦</span>
+            AUTOMATION
+            <span>✦</span>
+            DIGITAL MARKETING
+            <span>✦</span>
+            INNOVATION
+            <span>✦</span>
+            ENTREPRENEURSHIP
+            <span>✦</span>
+            CREATIVE TECHNOLOGY
+            <span>✦</span>
+
+        </div>
+
+    </div>
+
 </section>
 
-<!-- =========================
-PROJECTS SECTION
-========================= -->
-<section class="projects" id="projects">
-  <div class="section-inner">
-    <p class="section-label reveal">02 / SELECTED WORK</p>
-    <h2 class="section-heading reveal">MY PROJECTS</h2>
+
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
+
+<section class="projects section" id="projects">
+
+    <div class="section-number reveal">
+        02 / SELECTED WORK
+    </div>
+
+
+    <div class="projects-header">
+
+        <h2 class="section-title reveal">
+            MY
+            <span>PROJECTS</span>
+        </h2>
+
+        <p class="section-intro reveal">
+            A selection of digital ventures, intelligent systems,
+            and creative experiments.
+        </p>
+
+    </div>
+
 
     <div class="projects-grid">
 
-      <!-- PROJECT 1 -->
-      <article class="project-card project-card-featured reveal-scale tilt-card glow-border">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <div class="project-visual project-visual-brand">
-    <div class="datta-logo-wrap">
 
-        <div class="datta-logo">
-            <span class="dc-d">D</span>
-            <span class="dc-c">C</span>
-        </div>
+        <!-- PROJECT 1 -->
 
-        <div class="datta-logo-name">
-            <span class="datta-main">Datta</span>
-            <span class="datta-sub">CREATIONS</span>
-        </div>
+        <article class="project-card project-featured tilt-card reveal-scale">
+
+            <div class="project-card-glow"></div>
+
+            <div class="project-number">
+                01
+            </div>
+
+
+            <div class="project-visual datta-visual">
+
+                <div class="datta-orb orb-a"></div>
+                <div class="datta-orb orb-b"></div>
+
+                <div class="datta-logo-visual">
+                    <span>DC</span>
+                </div>
+
+                <div class="datta-grid-lines"></div>
+
+                <div class="visual-label">
+                    CREATIVE
+                </div>
+
+            </div>
+
+
+            <div class="project-info">
+
+                <div class="project-category">
+                    DIGITAL BRAND / CREATIVE VENTURE
+                </div>
+
+                <h3>
+                    Datta Creations
+                </h3>
+
+                <p>
+                    My own creative venture building premium websites,
+                    digital experiences, and brand identities for
+                    forward-thinking clients.
+                </p>
+
+
+                <div class="project-footer">
+
+                    <div class="project-tags">
+                        <span>Web</span>
+                        <span>Branding</span>
+                        <span>Creative</span>
+                    </div>
+
+                    <a
+                        href="https://dattacreations.in"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="project-link magnetic">
+
+                        Visit Website
+
+                        <i data-lucide="arrow-up-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 2 -->
+
+        <article class="project-card tilt-card reveal-scale">
+
+            <div class="project-number">
+                02
+            </div>
+
+
+            <div class="project-visual video-visual">
+
+                <video
+                    id="iotVideo"
+                    class="project-video"
+                    src="videos/video-1.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                    preload="metadata"
+                    aria-label="IoT project demonstration">
+                </video>
+
+
+                <div class="video-overlay">
+
+                    <div class="video-label">
+                        SMART SYSTEM
+                    </div>
+
+                    <button
+                        class="video-control"
+                        id="videoToggle"
+                        aria-label="Pause video">
+
+                        <i data-lucide="pause"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="project-info">
+
+                <div class="project-category">
+                    HARDWARE / AUTOMATION
+                </div>
+
+                <h3>
+                    IoT Projects
+                </h3>
+
+                <h4>
+                    Smart Automation Systems
+                </h4>
+
+                <p>
+                    Arduino & ESP32 based IoT systems, smart home
+                    automation, sensor networks, real-time monitoring,
+                    and innovative hardware solutions.
+                </p>
+
+
+                <div class="project-tags">
+
+                    <span>Arduino</span>
+                    <span>ESP32</span>
+                    <span>Sensors</span>
+                    <span>Automation</span>
+                    <span>IoT</span>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- PROJECT 3 -->
+
+        <article class="project-card tilt-card reveal-scale">
+
+            <div class="project-number">
+                03
+            </div>
+
+
+            <div class="project-visual marketing-visual">
+
+                <div class="instagram-ring ring-a"></div>
+                <div class="instagram-ring ring-b"></div>
+
+                <div class="instagram-center">
+
+                    <i data-lucide="instagram"></i>
+
+                </div>
+
+
+                <div class="marketing-float mf-one">
+                    CONTENT
+                </div>
+
+                <div class="marketing-float mf-two">
+                    BRAND
+                </div>
+
+                <div class="marketing-float mf-three">
+                    GROWTH
+                </div>
+
+            </div>
+
+
+            <div class="project-info">
+
+                <div class="project-category">
+                    DIGITAL / MARKETING
+                </div>
+
+                <h3>
+                    Digital Marketing
+                </h3>
+
+                <h4>
+                    Brand Growth Strategies
+                </h4>
+
+                <p>
+                    Developing social media strategies, digital campaigns,
+                    creative content, and online brand growth solutions.
+                </p>
+
+
+                <a
+                    href="https://www.instagram.com/datta_creations"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link magnetic">
+
+                    Explore Instagram
+
+                    <i data-lucide="arrow-up-right"></i>
+
+                </a>
+
+            </div>
+
+        </article>
 
     </div>
-</div>
-            <div class="project-info">
-              <span class="project-category">Digital Brand / Creative Venture</span>
-              <h3 class="project-title">Datta Creations</h3>
-              <span class="flip-hint">Hover to flip</span>
-            </div>
-          </div>
-          <div class="flip-back">
-            <p class="project-desc">
-              My own creative venture building premium websites, digital experiences, and brand
-              identities for forward-thinking clients.
-            </p>
-            <div class="project-tags">
-              <span>Branding</span><span>Web</span><span>Strategy</span>
-            </div>
-            <a href="https://dattacreations.in" target="_blank" rel="noopener" class="btn btn-small btn-outline magnetic">
-              <span>Visit Website</span><i data-lucide="arrow-up-right"></i>
-            </a>
-          </div>
-        </div>
-      </article>
 
-      <!-- PROJECT 2 - IOT (video) -->
-      <article class="project-card project-card-video reveal-scale tilt-card glow-border" style="--d:0.1s">
-        <div class="project-video-wrap">
-          <video class="project-video" id="iotVideo" muted loop playsinline preload="metadata">
-            <source src="videos/video-1.mp4" type="video/mp4">
-          </video>
-          <div class="video-overlay"></div>
-          <button class="video-toggle" id="videoToggle" aria-label="Play or pause project video">
-            <i data-lucide="play" id="videoIcon"></i>
-          </button>
-        </div>
-        <div class="project-info">
-          <span class="project-category">Smart Automation Systems</span>
-          <h3 class="project-title">IoT Projects</h3>
-          <p class="project-desc">
-            Arduino &amp; ESP32 based IoT systems, smart home automation, sensor networks,
-            real-time monitoring, and innovative hardware solutions.
-          </p>
-          <div class="project-tags">
-            <span>Arduino</span><span>ESP32</span><span>Sensors</span><span>Automation</span><span>IoT</span><span>Real-Time Monitoring</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- PROJECT 3 - MARKETING -->
-      <article class="project-card project-card-marketing reveal-scale tilt-card glow-border" style="--d:0.2s">
-        <div class="flip-inner">
-          <div class="flip-front">
-            <div class="project-visual project-visual-marketing">
-              <svg viewBox="0 0 200 200" class="project-svg" aria-hidden="true">
-                <rect x="35" y="35" width="130" height="130" rx="30" fill="none" stroke="url(#g2)" stroke-width="2"/>
-                <circle cx="100" cy="100" r="32" fill="none" stroke="url(#g2)" stroke-width="2"/>
-                <circle cx="135" cy="65" r="7" fill="url(#g2)"/>
-                <defs>
-                  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#2fd7a8"/>
-                    <stop offset="100%" stop-color="#ffb454"/>
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
-            <div class="project-info">
-              <span class="project-category">Brand Growth Strategies</span>
-              <h3 class="project-title">Digital Marketing</h3>
-              <span class="flip-hint">Hover to flip</span>
-            </div>
-          </div>
-          <div class="flip-back">
-            <p class="project-desc">
-              Developing social media strategies, digital campaigns, creative content,
-              and online brand growth solutions.
-            </p>
-            <div class="project-tags">
-              <span>Social Media</span><span>Campaigns</span><span>Content</span>
-            </div>
-            <a href="https://www.instagram.com/datta_creations?igsi=MTBrNTk3dDltYmdxcw==" target="_blank" rel="noopener" class="btn btn-small btn-outline magnetic">
-              <span>Explore Instagram</span><i data-lucide="arrow-up-right"></i>
-            </a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
 </section>
 
-<!-- =========================
-EXPERIENCE / CAREER SECTION
-========================= -->
-<section class="experience" id="experience">
-  <div class="section-inner">
-    <p class="section-label reveal">03 / CAREER</p>
-    <h2 class="section-heading reveal">WORK EXPERIENCE</h2>
 
-    <div class="timeline" id="timeline">
-      <div class="timeline-line"><span class="timeline-line-fill" id="timelineFill"></span></div>
+<!-- =========================================================
+     EXPERIENCE
+========================================================= -->
 
-      <div class="timeline-item reveal-left">
-        <div class="timeline-dot"><i data-lucide="rocket"></i></div>
-        <div class="timeline-card tilt-card glow-border">
-          <span class="timeline-label">Founder</span>
-          <h3 class="timeline-title">Datta Creations</h3>
-          <p class="timeline-desc">Leading a creative digital brand building websites, invitations, and digital experiences. Managing projects, client relations, creative direction, and team coordination.</p>
-        </div>
-      </div>
+<section class="experience section" id="experience">
 
-      <div class="timeline-item reveal-right">
-        <div class="timeline-dot"><i data-lucide="cpu"></i></div>
-        <div class="timeline-card tilt-card glow-border">
-          <span class="timeline-label">Hardware &amp; Automation</span>
-          <h3 class="timeline-title">IoT Development</h3>
-          <p class="timeline-desc">Building intelligent IoT systems with Arduino, ESP32, sensors, and automation technologies for smart and connected solutions.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal-left">
-        <div class="timeline-dot"><i data-lucide="code-2"></i></div>
-        <div class="timeline-card tilt-card glow-border">
-          <span class="timeline-label">Web &amp; Design</span>
-          <h3 class="timeline-title">Website Developer</h3>
-          <p class="timeline-desc">Creating cinematic, modern websites with premium UX design, smooth animations, responsive layouts, and cutting-edge frontend technology.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal-right">
-        <div class="timeline-dot"><i data-lucide="megaphone"></i></div>
-        <div class="timeline-card tilt-card glow-border">
-          <span class="timeline-label">Digital Marketing</span>
-          <h3 class="timeline-title">Marketing Strategist</h3>
-          <p class="timeline-desc">Building brand presence through social media, digital campaigns, content strategy, creative marketing, and online growth optimization.</p>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal-left">
-        <div class="timeline-dot"><i data-lucide="users"></i></div>
-        <div class="timeline-card tilt-card glow-border">
-          <span class="timeline-label">Team &amp; Leadership</span>
-          <h3 class="timeline-title">Supervisor &amp; Team Lead</h3>
-          <p class="timeline-desc">Coordinating teams, managing projects, mentoring collaborators, solving challenges, and leading collaborative creative initiatives.</p>
-        </div>
-      </div>
+    <div class="section-number reveal">
+        03 / CAREER
     </div>
-  </div>
+
+
+    <div class="experience-header">
+
+        <h2 class="section-title reveal">
+            WORK
+            <span>EXPERIENCE</span>
+        </h2>
+
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="timeline-progress">
+            <span></span>
+        </div>
+
+
+        <!-- 01 -->
+
+        <article class="timeline-item reveal-left">
+
+            <div class="timeline-dot">
+                <i data-lucide="rocket"></i>
+            </div>
+
+
+            <div class="timeline-content">
+
+                <span class="timeline-number">
+                    01
+                </span>
+
+                <span class="timeline-label">
+                    FOUNDER
+                </span>
+
+                <h3>
+                    Datta Creations
+                </h3>
+
+                <p>
+                    Leading a creative digital brand building websites,
+                    invitations, and digital experiences. Managing projects,
+                    client relations, creative direction, and team coordination.
+                </p>
+
+                <div class="timeline-line"></div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 02 -->
+
+        <article class="timeline-item reveal-right">
+
+            <div class="timeline-dot">
+                <i data-lucide="cpu"></i>
+            </div>
+
+
+            <div class="timeline-content">
+
+                <span class="timeline-number">
+                    02
+                </span>
+
+                <span class="timeline-label">
+                    HARDWARE & AUTOMATION
+                </span>
+
+                <h3>
+                    IoT Development
+                </h3>
+
+                <p>
+                    Building intelligent IoT systems with Arduino, ESP32,
+                    sensors, and automation technologies for smart and
+                    connected solutions.
+                </p>
+
+                <div class="timeline-line"></div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 03 -->
+
+        <article class="timeline-item reveal-left">
+
+            <div class="timeline-dot">
+                <i data-lucide="code-2"></i>
+            </div>
+
+
+            <div class="timeline-content">
+
+                <span class="timeline-number">
+                    03
+                </span>
+
+                <span class="timeline-label">
+                    WEB & DESIGN
+                </span>
+
+                <h3>
+                    Website Developer
+                </h3>
+
+                <p>
+                    Creating cinematic, modern websites with premium UX design,
+                    smooth animations, responsive layouts, and cutting-edge
+                    frontend technology.
+                </p>
+
+                <div class="timeline-line"></div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 04 -->
+
+        <article class="timeline-item reveal-right">
+
+            <div class="timeline-dot">
+                <i data-lucide="megaphone"></i>
+            </div>
+
+
+            <div class="timeline-content">
+
+                <span class="timeline-number">
+                    04
+                </span>
+
+                <span class="timeline-label">
+                    DIGITAL MARKETING
+                </span>
+
+                <h3>
+                    Marketing Strategist
+                </h3>
+
+                <p>
+                    Building brand presence through social media, digital
+                    campaigns, content strategy, creative marketing, and
+                    online growth optimization.
+                </p>
+
+                <div class="timeline-line"></div>
+
+            </div>
+
+        </article>
+
+
+        <!-- 05 -->
+
+        <article class="timeline-item reveal-left">
+
+            <div class="timeline-dot">
+                <i data-lucide="users"></i>
+            </div>
+
+
+            <div class="timeline-content">
+
+                <span class="timeline-number">
+                    05
+                </span>
+
+                <span class="timeline-label">
+                    TEAM & LEADERSHIP
+                </span>
+
+                <h3>
+                    Supervisor & Team Lead
+                </h3>
+
+                <p>
+                    Coordinating teams, managing projects, mentoring
+                    collaborators, solving challenges, and leading
+                    collaborative creative initiatives.
+                </p>
+
+                <div class="timeline-line"></div>
+
+            </div>
+
+        </article>
+
+    </div>
+
 </section>
 
-<!-- =========================
-SKILLS SECTION
-========================= -->
-<section class="skills" id="skills">
-  <div class="section-inner">
-    <p class="section-label reveal">04 / EXPERTISE</p>
-    <h2 class="section-heading reveal">WHAT I DO</h2>
+
+<!-- =========================================================
+     SKILLS
+========================================================= -->
+
+<section class="skills section" id="skills">
+
+    <div class="section-number reveal">
+        04 / EXPERTISE
+    </div>
+
+
+    <div class="skills-header">
+
+        <h2 class="section-title reveal">
+            WHAT
+            <span>I DO</span>
+        </h2>
+
+        <p class="section-intro reveal">
+            A multidisciplinary toolkit connecting code,
+            hardware, creativity and leadership.
+        </p>
+
+    </div>
+
 
     <div class="skills-grid">
-      <div class="skill-card reveal-scale tilt-card glow-border">
-        <div class="skill-icon"><i data-lucide="code"></i></div>
-        <h3>Web Development</h3>
-        <div class="skill-chips">
-          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span><span>UI/UX</span><span>Deployment</span>
-        </div>
-      </div>
-      <div class="skill-card reveal-scale tilt-card glow-border" style="--d:0.1s">
-        <div class="skill-icon"><i data-lucide="cpu"></i></div>
-        <h3>IoT &amp; Hardware</h3>
-        <div class="skill-chips">
-          <span>Arduino</span><span>ESP32</span><span>Sensors</span><span>Automation</span><span>Smart Systems</span><span>Monitoring</span>
-        </div>
-      </div>
-      <div class="skill-card reveal-scale tilt-card glow-border" style="--d:0.2s">
-        <div class="skill-icon"><i data-lucide="trending-up"></i></div>
-        <h3>Digital</h3>
-        <div class="skill-chips">
-          <span>Digital Marketing</span><span>Social Media</span><span>Brand Strategy</span><span>Content Strategy</span>
-        </div>
-      </div>
-      <div class="skill-card reveal-scale tilt-card glow-border" style="--d:0.3s">
-        <div class="skill-icon"><i data-lucide="users"></i></div>
-        <h3>Leadership</h3>
-        <div class="skill-chips">
-          <span>Team Leadership</span><span>Coordination</span><span>Client Communication</span><span>Problem Solving</span><span>Creative Direction</span>
-        </div>
-      </div>
+
+
+        <!-- WEB -->
+
+        <article class="skill-card reveal-scale">
+
+            <div class="skill-icon">
+                <i data-lucide="code-2"></i>
+            </div>
+
+            <span class="skill-number">
+                01
+            </span>
+
+            <h3>
+                Web Development
+            </h3>
+
+            <p>
+                Creating responsive, cinematic and interactive
+                digital experiences.
+            </p>
+
+            <div class="skill-list">
+
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Responsive Design</span>
+                <span>UI/UX</span>
+                <span>Deployment</span>
+
+            </div>
+
+        </article>
+
+
+        <!-- IOT -->
+
+        <article class="skill-card reveal-scale">
+
+            <div class="skill-icon">
+                <i data-lucide="cpu"></i>
+            </div>
+
+            <span class="skill-number">
+                02
+            </span>
+
+            <h3>
+                IoT & Hardware
+            </h3>
+
+            <p>
+                Building smart systems, automation and
+                connected hardware solutions.
+            </p>
+
+            <div class="skill-list">
+
+                <span>Arduino</span>
+                <span>ESP32</span>
+                <span>Sensors</span>
+                <span>Automation</span>
+                <span>Smart Systems</span>
+                <span>Monitoring</span>
+
+            </div>
+
+        </article>
+
+
+        <!-- DIGITAL -->
+
+        <article class="skill-card reveal-scale">
+
+            <div class="skill-icon">
+                <i data-lucide="megaphone"></i>
+            </div>
+
+            <span class="skill-number">
+                03
+            </span>
+
+            <h3>
+                Digital
+            </h3>
+
+            <p>
+                Helping brands build visibility and meaningful
+                digital connections.
+            </p>
+
+            <div class="skill-list">
+
+                <span>Marketing</span>
+                <span>Social Media</span>
+                <span>Brand Strategy</span>
+                <span>Content Strategy</span>
+
+            </div>
+
+        </article>
+
+
+        <!-- LEADERSHIP -->
+
+        <article class="skill-card reveal-scale">
+
+            <div class="skill-icon">
+                <i data-lucide="users"></i>
+            </div>
+
+            <span class="skill-number">
+                04
+            </span>
+
+            <h3>
+                Leadership
+            </h3>
+
+            <p>
+                Turning teams, ideas and projects into
+                coordinated outcomes.
+            </p>
+
+            <div class="skill-list">
+
+                <span>Team Leadership</span>
+                <span>Project Coordination</span>
+                <span>Client Communication</span>
+                <span>Problem Solving</span>
+                <span>Creative Direction</span>
+
+            </div>
+
+        </article>
+
     </div>
-  </div>
+
+
+    <!-- TECHNOLOGY ORBIT -->
+
+    <div class="tech-orbit-section reveal-scale">
+
+        <div class="orbit-title">
+            <span>TECH STACK</span>
+        </div>
+
+
+        <div class="big-orbit">
+
+            <div class="orbit-core">
+                <span>SRINU</span>
+                <small>BUILD • CREATE • INNOVATE</small>
+            </div>
+
+
+            <div class="orbit-track orbit-track-one">
+
+                <span style="--i:0">HTML</span>
+                <span style="--i:1">CSS</span>
+                <span style="--i:2">JS</span>
+                <span style="--i:3">IOT</span>
+
+            </div>
+
+
+            <div class="orbit-track orbit-track-two">
+
+                <span style="--i:0">ESP32</span>
+                <span style="--i:1">ARDUINO</span>
+                <span style="--i:2">AI</span>
+                <span style="--i:3">WEB</span>
+
+            </div>
+
+
+            <div class="orbit-track orbit-track-three">
+
+                <span style="--i:0">AUTOMATION</span>
+                <span style="--i:1">MARKETING</span>
+                <span style="--i:2">LEADERSHIP</span>
+                <span style="--i:3">DESIGN</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
 </section>
 
-<!-- =========================
-TECH ORBIT SECTION
-========================= -->
-<section class="tech-orbit-section">
-  <div class="tech-orbit-wrap">
-    <div class="tech-orbit-center reveal-scale">Srinu</div>
-    <div class="tech-orbit-ring tech-orbit-ring-a">
-      <span class="tech-badge">HTML</span>
-      <span class="tech-badge">CSS</span>
-      <span class="tech-badge">JS</span>
-      <span class="tech-badge">Arduino</span>
-    </div>
-    <div class="tech-orbit-ring tech-orbit-ring-b">
-      <span class="tech-badge">ESP32</span>
-      <span class="tech-badge">IoT</span>
-      <span class="tech-badge">Automation</span>
-      <span class="tech-badge">Marketing</span>
-      <span class="tech-badge">Leadership</span>
-    </div>
-  </div>
-</section>
 
-<!-- =========================
-PHILOSOPHY / QUOTE SECTION
-========================= -->
-<section class="quote-section">
-  <div class="section-inner">
-    <p class="quote-line reveal-scale">I don't just build websites or IoT systems.</p>
-    <p class="quote-line reveal-scale" style="--d:0.15s">I build <span class="grad-text">ideas</span> into <span class="grad-text">experiences</span>.</p>
-  </div>
-</section>
+<!-- =========================================================
+     PHILOSOPHY
+========================================================= -->
 
-<!-- =========================
-CONNECT SECTION
-========================= -->
-<section class="connect" id="connect">
-  <div class="section-inner">
-    <p class="section-label reveal">05 / CONNECT</p>
-    <h2 class="section-heading reveal">FIND ME ONLINE</h2>
-    <p class="section-sub reveal">Let's connect, collaborate, build something creative, or simply talk about technology and ideas.</p>
+<section class="philosophy section">
 
-    <div class="connect-grid">
-      <a href="https://www.instagram.com/mr._.srinu__?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw%3D%3D" target="_blank" rel="noopener" class="connect-card tilt-card reveal-scale glow-border">
-        <i data-lucide="instagram"></i>
-        <h3>Instagram</h3>
-        <span>@mr._.srinu__</span>
-        <i data-lucide="arrow-up-right" class="connect-arrow"></i>
-      </a>
-      <a href="https://www.facebook.com/srinu.shankar.37?rdid=sMjLfflB9iZAzWjH&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CKvXLoRxz%2F" target="_blank" rel="noopener" class="connect-card tilt-card reveal-scale glow-border" style="--d:0.1s">
-        <i data-lucide="facebook"></i>
-        <h3>Facebook</h3>
-        <span>Srinu Shankar</span>
-        <i data-lucide="arrow-up-right" class="connect-arrow"></i>
-      </a>
-      <a href="https://www.snapchat.com/@srinu_212" target="_blank" rel="noopener" class="connect-card tilt-card reveal-scale glow-border" style="--d:0.2s">
-        <i data-lucide="ghost"></i>
-        <h3>Snapchat</h3>
-        <span>@srinu_212</span>
-        <i data-lucide="arrow-up-right" class="connect-arrow"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/ch-srinivas-srinu-3a5941398" target="_blank" rel="noopener" class="connect-card tilt-card reveal-scale glow-border" style="--d:0.3s">
-        <i data-lucide="linkedin"></i>
-        <h3>LinkedIn</h3>
-        <span>Ch Srinivas Srinu</span>
-        <i data-lucide="arrow-up-right" class="connect-arrow"></i>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- =========================
-CONTACT SECTION
-========================= -->
-<section class="contact" id="contact">
-  <div class="section-inner">
-    <h2 class="contact-heading reveal">
-      HAVE AN IDEA?<br><span class="grad-text">LET'S BUILD IT.</span>
-    </h2>
-    <p class="contact-sub reveal">
-      Whether it's a website, an IoT idea, digital collaboration, business opportunity,
-      or creative project — let's connect.
-    </p>
-
-    <div class="contact-actions reveal">
-      <a href="tel:8367022341" class="btn btn-outline magnetic">
-        <i data-lucide="phone"></i><span>Call Me</span>
-      </a>
-      <a href="https://wa.me/918367022341?text=Hi%20Srinu%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you." target="_blank" rel="noopener" class="btn btn-whatsapp magnetic">
-        <i data-lucide="message-circle"></i><span>WhatsApp Me</span>
-      </a>
+    <div class="philosophy-bg">
+        IDEAS
     </div>
 
-    <form class="contact-form reveal-scale" id="contactForm">
-      <div class="form-row">
-        <div class="form-field">
-          <label for="cf-name">Name</label>
-          <input type="text" id="cf-name" name="name" required placeholder="Your name">
-        </div>
-        <div class="form-field">
-          <label for="cf-email">Email</label>
-          <input type="email" id="cf-email" name="email" placeholder="you@example.com">
-        </div>
-      </div>
-      <div class="form-row">
-        <div class="form-field">
-          <label for="cf-phone">Phone</label>
-          <input type="tel" id="cf-phone" name="phone" placeholder="Your phone number">
-        </div>
-        <div class="form-field">
-          <label for="cf-purpose">Purpose</label>
-          <select id="cf-purpose" name="purpose">
-            <option value="Website Development">Website Development</option>
-            <option value="IoT Project">IoT Project</option>
-            <option value="Digital Marketing">Digital Marketing</option>
-            <option value="Business Collaboration">Business Collaboration</option>
-            <option value="General Enquiry">General Enquiry</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-field">
-        <label for="cf-message">Message</label>
-        <textarea id="cf-message" name="message" rows="4" placeholder="Tell me about your idea..."></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary magnetic">
-        <span>Send Message</span><i data-lucide="arrow-right"></i>
-      </button>
-    </form>
-  </div>
+
+    <div class="philosophy-content">
+
+        <span class="philosophy-label reveal">
+            MY PHILOSOPHY
+        </span>
+
+
+        <h2 class="philosophy-title">
+
+            <span class="philosophy-line reveal">
+                I don't just build
+            </span>
+
+            <span class="philosophy-line reveal">
+                <em>websites</em> or
+            </span>
+
+            <span class="philosophy-line reveal">
+                <em>IoT systems.</em>
+            </span>
+
+            <span class="philosophy-line reveal">
+                I build <strong>ideas</strong>
+            </span>
+
+            <span class="philosophy-line reveal">
+                into <strong>experiences.</strong>
+            </span>
+
+        </h2>
+
+    </div>
+
 </section>
+
+
+<!-- =========================================================
+     CONNECT
+========================================================= -->
+
+<section class="connect section" id="connect">
+
+    <div class="section-number reveal">
+        05 / CONNECT
+    </div>
+
+
+    <div class="connect-header">
+
+        <h2 class="section-title reveal">
+            FIND ME
+            <span>ONLINE</span>
+        </h2>
+
+        <p class="section-intro reveal">
+            Let's connect, collaborate, build something creative,
+            or simply talk about technology and ideas.
+        </p>
+
+    </div>
+
+
+    <div class="social-grid">
+
+
+        <!-- Instagram -->
+
+        <a
+            href="https://www.instagram.com/datta_creations"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-card instagram-card reveal-scale">
+
+            <div class="social-card-top">
+
+                <span>
+                    INSTAGRAM
+                </span>
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </div>
+
+
+            <div class="social-icon-large">
+                <i data-lucide="instagram"></i>
+            </div>
+
+
+            <div class="social-card-bottom">
+
+                <strong>
+                    @datta_creations
+                </strong>
+
+                <small>
+                    Creative Venture
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <!-- Facebook -->
+
+        <a
+            href="#"
+            class="social-card facebook-card reveal-scale">
+
+            <div class="social-card-top">
+
+                <span>
+                    FACEBOOK
+                </span>
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </div>
+
+
+            <div class="social-icon-large">
+                <i data-lucide="facebook"></i>
+            </div>
+
+
+            <div class="social-card-bottom">
+
+                <strong>
+                    Facebook
+                </strong>
+
+                <small>
+                    Connect with me
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <!-- Snapchat -->
+
+        <a
+            href="#"
+            class="social-card snapchat-card reveal-scale">
+
+            <div class="social-card-top">
+
+                <span>
+                    SNAPCHAT
+                </span>
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </div>
+
+
+            <div class="social-icon-large">
+                <i data-lucide="camera"></i>
+            </div>
+
+
+            <div class="social-card-bottom">
+
+                <strong>
+                    @srinu_212
+                </strong>
+
+                <small>
+                    Follow my journey
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <!-- LinkedIn -->
+
+        <a
+            href="#"
+            class="social-card linkedin-card reveal-scale">
+
+            <div class="social-card-top">
+
+                <span>
+                    LINKEDIN
+                </span>
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </div>
+
+
+            <div class="social-icon-large">
+                <i data-lucide="linkedin"></i>
+            </div>
+
+
+            <div class="social-card-bottom">
+
+                <strong>
+                    Ch Srinivas Srinu
+                </strong>
+
+                <small>
+                    Professional network
+                </small>
+
+            </div>
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section class="contact section" id="contact">
+
+    <div class="contact-background">
+        LET'S BUILD
+    </div>
+
+
+    <div class="contact-content">
+
+        <span class="contact-label reveal">
+            HAVE AN IDEA?
+        </span>
+
+
+        <h2 class="contact-title reveal">
+
+            <span>
+                LET'S
+            </span>
+
+            <span class="gradient-text">
+                BUILD IT.
+            </span>
+
+        </h2>
+
+
+        <p class="contact-description reveal">
+            Whether it's a website, an IoT idea, digital collaboration,
+            business opportunity, or creative project — let's connect.
+        </p>
+
+
+        <div class="contact-actions reveal">
+
+            <a
+                href="tel:8367022341"
+                class="contact-button magnetic">
+
+                <span class="contact-button-icon">
+                    <i data-lucide="phone"></i>
+                </span>
+
+                <span>
+                    <small>CALL ME</small>
+                    8367022341
+                </span>
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </a>
+
+
+            <a
+                href="https://wa.me/918367022341?text=Hi%20Srinu%2C%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-button whatsapp-button magnetic">
+
+                <span class="contact-button-icon">
+                    <i data-lucide="message-circle"></i>
+                </span>
+
+                <span>
+                    <small>WHATSAPP ME</small>
+                    Let's Chat
+                </span>
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- CONTACT FORM -->
+
+    <div class="contact-form-wrapper reveal-scale">
+
+        <div class="form-heading">
+
+            <span>
+                START A CONVERSATION
+            </span>
+
+            <h3>
+                Tell me about your idea.
+            </h3>
+
+        </div>
+
+
+        <form id="contactForm" class="contact-form">
+
+            <div class="form-group">
+
+                <label for="contactName">
+                    Name
+                </label>
+
+                <input
+                    type="text"
+                    id="contactName"
+                    name="name"
+                    placeholder="Your name"
+                    autocomplete="name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="contactEmail">
+                    Email
+                </label>
+
+                <input
+                    type="email"
+                    id="contactEmail"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="contactPhone">
+                    Phone
+                </label>
+
+                <input
+                    type="tel"
+                    id="contactPhone"
+                    name="phone"
+                    placeholder="Your phone number"
+                    autocomplete="tel"
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="contactPurpose">
+                    Purpose
+                </label>
+
+                <select
+                    id="contactPurpose"
+                    name="purpose"
+                    required>
+
+                    <option value="">
+                        Select purpose
+                    </option>
+
+                    <option value="Website Development">
+                        Website Development
+                    </option>
+
+                    <option value="IoT Project">
+                        IoT Project
+                    </option>
+
+                    <option value="Digital Marketing">
+                        Digital Marketing
+                    </option>
+
+                    <option value="Business Collaboration">
+                        Business Collaboration
+                    </option>
+
+                    <option value="General Enquiry">
+                        General Enquiry
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group form-full">
+
+                <label for="contactMessage">
+                    Message
+                </label>
+
+                <textarea
+                    id="contactMessage"
+                    name="message"
+                    rows="5"
+                    placeholder="Tell me about your project..."
+                    required></textarea>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="form-submit magnetic">
+
+                Send Message
+
+                <i data-lucide="arrow-up-right"></i>
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
 
 </main>
 
-<!-- =========================
-FOOTER
-========================= -->
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
 <footer class="footer">
-  <div class="footer-bigtext" aria-hidden="true">SRINU.</div>
-  <div class="section-inner footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <h3>Chalamgolu Srinivas</h3>
-        <p>Founder • IoT Engineer • Developer • Digital Innovator</p>
-      </div>
-      <nav class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#connect">Connect</a>
-      </nav>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/mr._.srinu__?utm_source=ig_web_button_share_sheet&igsi=ZDNlZDc0MzIxNw%3D%3D" target="_blank" rel="noopener" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-        <a href="https://www.linkedin.com/in/ch-srinivas-srinu-3a5941398" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-        <a href="https://www.facebook.com/srinu.shankar.37?rdid=sMjLfflB9iZAzWjH&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CKvXLoRxz%2F" target="_blank" rel="noopener" aria-label="Facebook"><i data-lucide="facebook"></i></a>
-        <a href="https://www.snapchat.com/@srinu_212" target="_blank" rel="noopener" aria-label="Snapchat"><i data-lucide="ghost"></i></a>
-      </div>
+
+    <div class="footer-background-text">
+        SRINU.
     </div>
+
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+
+            <a href="#home"
+               class="footer-logo">
+
+                <img
+                    src="images/myphoto1.jpg"
+                    alt="Chalamgolu Srinivas"
+                >
+
+                <span>
+                    SRINU.
+                </span>
+
+            </a>
+
+
+            <p>
+                Founder • IoT Engineer • Developer • Digital Innovator
+            </p>
+
+        </div>
+
+
+        <div class="footer-nav">
+
+            <span>NAVIGATION</span>
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+            <a href="#connect">Connect</a>
+
+        </div>
+
+
+        <div class="footer-social">
+
+            <span>SOCIAL</span>
+
+            <a
+                href="https://www.instagram.com/datta_creations"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                Instagram
+                <i data-lucide="arrow-up-right"></i>
+
+            </a>
+
+            <a href="#connect">
+                LinkedIn
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+            <a href="#connect">
+                Facebook
+                <i data-lucide="arrow-up-right"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-middle">
+
+        <div>
+            Designed & Built with passion by
+            <strong>Chalamgolu Srinivas</strong>
+        </div>
+
+
+        <a
+            href="https://dattacreations.in"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            Website Creations by
+            <strong>Datta Creations</strong>
+
+            <i data-lucide="arrow-up-right"></i>
+
+        </a>
+
+    </div>
+
 
     <div class="footer-bottom">
-      <p>Designed &amp; Built with passion by Chalamgolu Srinivas</p>
-      <p>Website Creations by <a href="https://dattacreations.in" target="_blank" rel="noopener">Datta Creations</a></p>
-      <p>&copy; 2026 Chalamgolu Srinivas. All Rights Reserved.</p>
+
+        <span>
+            © 2026 Chalamgolu Srinivas. All Rights Reserved.
+        </span>
+
+
+        <button
+            id="backTop"
+            class="back-top magnetic"
+            aria-label="Back to top">
+
+            <i data-lucide="arrow-up"></i>
+
+        </button>
+
     </div>
-  </div>
+
 </footer>
 
-<button class="back-to-top magnetic" id="backToTop" aria-label="Back to top">
-  <i data-lucide="arrow-up"></i>
-</button>
 
-<script src="script.js" defer></script>
+<!-- =========================================================
+     SCRIPT
+========================================================= -->
+
+<script src="script.js"></script>
+
 </body>
 </html>
